@@ -1,1 +1,4 @@
-/.idea
+.idea/
+uitest/error_shots/
+uitest/test-results/
+node_modules/
