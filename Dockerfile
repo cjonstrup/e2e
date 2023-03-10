@@ -11,8 +11,7 @@ RUN pip install \
     urllib3 \
     certif \
     chardet \
-    robotframework \
-    robotframework-browser
+    robotframework
 
 COPY playwright /tests
 
