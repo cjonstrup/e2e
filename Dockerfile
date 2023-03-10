@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/playwright:v1.31.0-focal
 
 RUN apt -y update && \
-	apt -y install python3-pip vim && \
+	apt -y install python3-pip vim mc && \
 	pip install pytest-playwright requests urllib3 certifi
 
 COPY playwright /tests
