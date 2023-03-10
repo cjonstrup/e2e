@@ -1,17 +1,8 @@
 FROM mcr.microsoft.com/playwright:v1.31.0-focal
 
 RUN apt -y update && \
-	apt -y install python3-pip vim mc
-
-RUN pip install \
-    --no-cache-dir \
-    --upgrade \
-    pytest-playwright \ 
-    requests \
-    urllib3 \
-    certif \
-    chardet \
-    robotframework
+	apt -y install python3-pip vim mc && \
+	pip install pytest-playwright requests urllib3 certifi
 
 COPY playwright /tests
 
@@ -38,7 +29,3 @@ CMD pytest tests
 
 #https://github.com/microsoft/wslg/blob/main/samples/container/Containers.md
 #https://www.oddbird.net/2022/11/30/headed-playwright-in-docker/
-
-#%USERPROFILE%\.wslconfig
-#[wsl2]
-#guiApplications = true
