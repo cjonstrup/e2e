@@ -12,7 +12,7 @@ RUN pip install \
     certif \
     chardet \
     robotframework \
-    robotframework-browser \
+    robotframework-browser
 
 COPY playwright /tests
 
